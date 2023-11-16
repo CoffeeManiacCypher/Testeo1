@@ -43,24 +43,24 @@ const Index = () => {
           
           <ul>
             <li>
-              <h3>Titulo</h3>
-              <a>1sdfdsfsd</a>
-              <a>2ddfdsf</a>
-              <a>3sdfsdfsd</a>
+              <h3>Contactos</h3>
+              <a>55-2829645</a>
+              <a>asodacristalina@gmail.com</a>
+              <a>+56 9 8445 9308</a>
             </li>
           </ul>
           <br/>
           <ul>
             <li>
-              <h3>Titulo</h3>
-              <a>1</a>
-              <a>2</a>
-              <a>3</a>
+              <h3>Contactos Flamenco</h3>
+              <a>55-2829645</a>
+              <a>flamencocrg@gmail.com</a>
+              <a>+56 9 9150 7245</a>
             </li>
           </ul>
 
         </section>
-        <section class="bottom"> @Agua Purificada Cristalina y Flamenco</section>
+        <section class="bottom"> © 2023 Agua Purificada Cristalina y Flamenco</section>
       </footer>
     </div>
   )
