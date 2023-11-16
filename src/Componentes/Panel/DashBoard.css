@@ -1,0 +1,23 @@
+.dashboard-panel {
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    width: 500px;
+    padding: 20px; /* Ajusta el espacio interno según tus necesidades */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin: 25px;
+  }
+  
+  .dashboard-panel h2 {
+    color: #333;
+    margin-bottom: 10px; /* Ajusta el margen inferior según tus necesidades */
+  }
+  
+  .dashboard-panel p {
+    color: #666;
+    margin-bottom: 20px; /* Ajusta el margen inferior según tus necesidades */
+  }
+  
