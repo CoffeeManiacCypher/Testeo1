@@ -11,7 +11,7 @@ const Index = () => {
         <url class="nav-links">
             <a class="btn" href="#"><button>Inicio</button></a>
             <a class="btn" href="#"><button class="bi bi-bag-check"> Catálogo</button></a>
-            <a class="btn" href="#"><button class="bi bi-info-square-fill"> Quienes somos</button></a>
+            <a class="btn" href="#"><button class="bi bi-info-square-fill"> ¿Quiénes somos?</button></a>
             <Link class="btn" href="#s5" to={"/content"}><button class="bi bi-telephone-fill"> Contactos</button></Link >
             <Link class="btn" to={"/Panel"}><button class="bi bi-gear-fill"/></Link>
         </url>
