@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
 }
 
@@ -13,8 +13,60 @@
   }
 }
 
+.App-nav {
+  background: rgb(107,68,224);
+  background: linear-gradient(109deg, rgba(107,68,224,1) 0%, rgba(214,55,213,1) 100%);
+  min-height: 12vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+}
+
+.nav-links .btn{
+  display: column;
+  min-height: 6vh;
+  padding: 9px 25px;
+}
+
+.nav-links .btn button{
+  font-size: calc(11px + 2vmin);
+  font-weight: 700;
+  color: #e8e8e8;
+  padding: 9px 25px;
+  background: #eceff100;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.nav-links .btn button:hover{
+  background-color: #e4e2f8ec;
+  color: #e6b12c;
+  transform: scale(1.1);
+}
+
 .App-header {
-  background-color: #566480;
+  background-color: #b2bccf;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+
+.App-body {
+  background-color: #29303d;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,9 +76,18 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-footer{
+  background-color: #1a1f29;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
+
+
 
 @keyframes App-logo-spin {
   from {
