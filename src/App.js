@@ -1,6 +1,4 @@
-import logo from './logo.svg';
 import './App.css';
-
 import Component from './Component';
 import Index from './Componentes/Index/Index';
 import WebContent from './Componentes/WebContent/Content'
