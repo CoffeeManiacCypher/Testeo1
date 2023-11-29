@@ -6,6 +6,8 @@ const Navbar = () => {
   return (
     <nav className="App-nav">
 
+        <h1>Agua Purificada Cristalina</h1>
+
         <url class="nav-links">
             <a class="btn" href="#"><button>Inicio</button></a>
             <a class="btn" href="#"><button class="bi bi-bag-check"> Catálogo</button></a>

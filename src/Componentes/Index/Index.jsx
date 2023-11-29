@@ -7,8 +7,9 @@ const Index = () => {
     <div className="App">
 
         <nav className="App-nav">
-
+        
         <url class="nav-links">
+            <a class="btn"><a>Agua Purificada Cristalina</a></a>
             <a class="btn" href="#"><button>Inicio</button></a>
             <a class="btn" href="#"><button class="bi bi-bag-check"> Catálogo</button></a>
             <a class="btn" href="#"><button class="bi bi-info-square-fill"> ¿Quiénes somos?</button></a>
@@ -21,13 +22,11 @@ const Index = () => {
       
 
       <header className="App-header">
-        
-        <img src={LogoAPCF} className="App-logo" alt="logo" />
-        <p>
-          Preparativos de la plataforma.
-        </p>
 
-        
+        <h1 class="Titulo">Hidratación a la comodidad de tu hogar</h1>
+        <h2 class="Subtitulo">Hidrátate ahora con Agua Purificada Cristalina y sus productos.</h2>
+        <a class="btn" href="#"><button class="bi bi-bag-check"> Échale un vistazo</button></a>
+       
       </header>
 
       <body className="App-body">

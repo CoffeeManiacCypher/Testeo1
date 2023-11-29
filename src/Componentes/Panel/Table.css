@@ -1,12 +1,25 @@
 #container{
     width: 100%;
     border: 1px solid #000;
+    align-items: center;
+    justify-content: center;
   }
-  th, td {
-    width: 25%;
+  th{
+    background: rgb(110, 79, 205);
+    padding: 3px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: white;
+    font-size: calc(6px + 2vmin);
+  }
+
+  td {
+    width: 50%;
     text-align: left;
     vertical-align: top;
-    border: 1px solid #000;
+    border: none;
   }
   
   .separacion{
@@ -14,4 +27,51 @@
     border: 1px solid #000;
     
   }
-  
+
+#container .btnEdit{
+  min-height: 4vh;
+  padding: 9px 25px;
+}
+
+#container .btnEdit button{
+    font-size: calc(3px + 2vmin);
+    font-weight: 700;
+    color: #e6b12ccf;
+    padding: 9px 25px;
+    background: #eceff100;
+    border: none;
+    border-radius: 30px;
+
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+#container .btnEdit :hover{
+  background-color: #e6b12c;
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+#container .btnDel{
+  min-height: 4vh;
+  padding: 9px 25px;
+}
+
+#container .btnDel button{
+    font-size: calc(3px + 2vmin);
+    font-weight: 700;
+    color: #e62c2ccf;
+    padding: 9px 25px;
+    background: #eceff100;
+    border: none;
+    border-radius: 30px;
+
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+#container .btnDel :hover{
+  background-color: #e62c2ccf;
+  color: #ffffff;
+  transform: scale(1.1);
+}

@@ -1,34 +1,72 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 20vmin;
-  pointer-events: none;
-}
-
 .App-header {
-  background-image: url(../public/background.jpg);
+  background-image: url(../public/HidratateConAPCF.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
-
-  min-height: 80vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-header .Titulo{
+  font-family: roboto;
+  color: #0D0C22;
+  width: 550px;
+  font-size: calc(50px + 4vmin);
+  
+  text-align: left;
+  line-height: 1.3;
+  font-weight: 400;
+  letter-spacing: 1.3px;
+  margin-left: 150px;  
+}
+
+.App-header .Subtitulo{
+  font-family: roboto;
+  color: #0D0C22;
+  width: 530px;
+  letter-spacing: 1.3px;
+  margin-top: 20px;
+  margin-left: 150px;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-size: 30px;
+
+}
+
+.App-header .btn{
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 240px;
+  margin-bottom: 50px;
+}
+
+.App-header .btn button{
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #F6F4EE;
+  padding: 12px 20px;
+  letter-spacing: 1.1px;
+  background: #1A2884;
+  backdrop-filter: blur(10px);
+  border: 1px ;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.App-header .btn button:hover{
+  background-color: #EA4C7C;
+  color: #F6F4EE;
+  transform: scale(1.1);
 }
 
 .App-body {
-  background-color: #282c34;
+  background-color: #F6F4EE;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

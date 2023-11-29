@@ -50,14 +50,15 @@ const Table = () => {
 };
 
 const DataTable = ({ data, handleEdit, handleDelete }) => (
+
   <table id="container">
     <thead>
       <tr>
         <th>ID</th>
         <th>Nombre Artículos</th>
         <th>Valor</th>
-        <th>Descripción</th>
-        <th>Acciones</th>
+        <th class="bi bi-info-circle-fill"> Descripción</th>
+        <th class="bi bi-clipboard2-data"> Acciones</th>
       </tr>
     </thead>
     <tbody>
@@ -68,8 +69,8 @@ const DataTable = ({ data, handleEdit, handleDelete }) => (
           <td>{item.Valor}</td>
           <td>{item.Descripcion}</td>
           <td>
-            <button onClick={() => handleEdit(item.id)}>Editar</button>
-            <button onClick={() => handleDelete(item.id)}>Eliminar</button>
+            <a class="btnEdit"><button class="bi bi-pencil" onClick={() => handleEdit(item.id)}> Editar</button></a>
+            <a class="btnDel"><button class="bi bi-x-lg" onClick={() => handleDelete(item.id)}>  Eliminar</button></a>
           </td>
         </tr>
       ))}
