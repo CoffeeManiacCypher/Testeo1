@@ -1,4 +1,3 @@
-import React from 'react'
 import Dashboard from './DashBoard';
 import PNavbar from './PNavbar';
 

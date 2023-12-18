@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import { useState } from 'react';
 import './Table.css';
 
 const Table = () => {
   const [data, setData] = useState([
     { id: 1, nombre: 'Botella de agua Flamenco', Valor: 1000, Descripcion: 'Botella de  250cc, agua purificada' },
     { id: 2, nombre: 'Bidon de agua Cristalina', Valor: 5000, Descripcion: 'Bidon de  10 Lts, agua purificada' },
-    
   ]);
 
   const [newData, setNewData] = useState({ id: null, nombre: '', Valor: 0, Descripcion: '' });
@@ -38,7 +38,6 @@ const Table = () => {
   return (
     <div>
       <DataTable data={data} handleEdit={handleEdit} handleDelete={handleDelete} />
-
       <DataManagement
         newData={newData}
         setNewData={setNewData}
@@ -50,15 +49,14 @@ const Table = () => {
 };
 
 const DataTable = ({ data, handleEdit, handleDelete }) => (
-
   <table id="container">
     <thead>
       <tr>
         <th>ID</th>
         <th>Nombre Artículos</th>
         <th>Valor</th>
-        <th class="bi bi-info-circle-fill"> Descripción</th>
-        <th class="bi bi-clipboard2-data"> Acciones</th>
+        <th className="bi bi-info-circle-fill"> Descripción</th>
+        <th className="bi bi-clipboard2-data"> Acciones</th>
       </tr>
     </thead>
     <tbody>
@@ -69,14 +67,20 @@ const DataTable = ({ data, handleEdit, handleDelete }) => (
           <td>{item.Valor}</td>
           <td>{item.Descripcion}</td>
           <td>
-            <a class="btnEdit"><button class="bi bi-pencil" onClick={() => handleEdit(item.id)}> Editar</button></a>
-            <a class="btnDel"><button class="bi bi-x-lg" onClick={() => handleDelete(item.id)}>  Eliminar</button></a>
+            <a className="btnEdit"><button className="bi bi-pencil" onClick={() => handleEdit(item.id)}> Editar</button></a>
+            <a className="btnDel"><button className="bi bi-x-lg" onClick={() => handleDelete(item.id)}>  Eliminar</button></a>
           </td>
         </tr>
       ))}
     </tbody>
   </table>
 );
+
+DataTable.propTypes = {
+  data: PropTypes.array.isRequired,
+  handleEdit: PropTypes.func.isRequired,
+  handleDelete: PropTypes.func.isRequired,
+};
 
 const DataManagement = ({ newData, setNewData, editing, handleSave }) => (
   <div>
@@ -113,5 +117,17 @@ const DataManagement = ({ newData, setNewData, editing, handleSave }) => (
     <button onClick={handleSave}>{editing ? 'Guardar' : 'Agregar'}</button>
   </div>
 );
+
+DataManagement.propTypes = {
+  newData: PropTypes.shape({
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    nombre: PropTypes.string,
+    Valor: PropTypes.number,
+    Descripcion: PropTypes.string,
+  }).isRequired,
+  setNewData: PropTypes.func.isRequired,
+  editing: PropTypes.bool.isRequired,
+  handleSave: PropTypes.func.isRequired,
+};
 
 export default Table;

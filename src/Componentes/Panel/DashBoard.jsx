@@ -1,4 +1,3 @@
-import React from 'react';
 import './DashBoard.css';
 import Table from './Table'; // Asegúrate de importar el componente de la tabla
 

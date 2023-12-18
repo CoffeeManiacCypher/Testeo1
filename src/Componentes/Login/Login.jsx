@@ -1,35 +1,70 @@
-import React, {useState} from 'react'
-import "./Login.css";
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';  // Importa useNavigate
+import fondo_login_2 from '../../assets/fondo_login_2.png';
+import usuario from '../../assets/usuario.png';
+import appFirebase from '../../credenciales';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import './inicio.css';
 
-export function Login({setUser}) {
+const auth = getAuth(appFirebase)
 
-    const [Correo, setCorreo] = useState("")
-    const [Contraseña, setContraseña] = useState("")
-    const [Error, setError] = useState(false)
+const Login = () => {
+    const [registrando, setRegistrando] = useState(false)
+    const navigate = useNavigate();  // Inicializa useNavigate
 
-    const handleSubmit = (e) =>{
-        if(Correo === "" || Contraseña === "") {
-            setError(true)
-            return
+    const functionAutenticacion = async (e) => {
+        e.preventDefault();
+        const correo = e.target.email.value;
+        const contraseña = e.target.password.value;
+
+        if (registrando) {
+            try {
+                await createUserWithEmailAndPassword(auth, correo, contraseña);
+                
+                navigate('/PControl');
+            } catch (error) {
+                alert("Asegura que la contraseña tenga más de 8 caracteres")
+            }
+        } else {
+            try {
+                await signInWithEmailAndPassword(auth, correo, contraseña);
+                
+                navigate('/PControl');
+            } catch (error) {
+                alert("El correo y/o contraseña son incorrectas")
+            }
         }
-        setError(false)
-        
-        setUser([Correo])
     }
 
-    return(
-        <section>
-            <h1>Formulario</h1>
+    return (
+        <div className='container'>
+            <div className="row">
+                <div className="col-md-4">
+                    <div className="padre">
+                        <div className="card">
+                            <div className="card card-body shadow-lg">
+                                <img src={usuario} alt='' className='estilo-usuario' />
+                                <form onSubmit={functionAutenticacion}>
+                                    <input type="text" placeholder='Ingresar Email' className='cajatexto' id='email' />
+                                    <input type="password" placeholder='Ingresar Contraseña' className='cajatexto' id='password'/>
+                                    
+                                    <button className='btnform'>
+                                        {registrando ? "Registrate" : "Iniciar Sesion"}
+                                    </button>
+                                
+                                </form>
+                                <h4 className='texto'>{registrando ? "Si ya tienes cuenta" : "No tienes cuenta"}<button className='btnswitch' onClick={() => setRegistrando(!registrando)}>{registrando ? "Inicia Sesion" : "Registrate"}</button></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-           <form className="Formulario" onSubmit={handleSubmit} > 
-                <input type="text" onChange={e =>setCorreo(e.target.value)} /> <br/><br/>
-                <input type="password"value={Contraseña} onChange={e =>setContraseña(e.target.value)}/><br/>
-                <button>Iniciar sesion </button>
-            </form> 
-            
-            {Error && <p>Todos los campos son obligatorios </p>}
-        </section>
+                <div className="col-md-8">
+                    <img src={fondo_login_2} alt="" className='tamaño-imagen' />
+                </div>
+
+            </div>
+        </div>
     )
 }
-
-export default Login
+export default Login;

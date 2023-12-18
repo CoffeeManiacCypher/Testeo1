@@ -1,0 +1,96 @@
+.container{
+    display:flex;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    
+}
+/* card de formulario  */
+.padre{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    
+}
+/* imagen */
+.tamaño-imagen{
+    width: auto;
+    height: auto;
+    mix-blend-mode: multiply;
+}
+
+/* icono de usuario */
+.estilo-usuario{
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+    
+}
+
+/* editor de la caja de formulario, donde sale el email y contraseña*/
+.cajatexto{
+    background-color: #cccccc40;
+    border-color: slategray;
+    border-radius: 30px;
+    width: 100%;
+    padding: 15px;
+    border-width: 0px;
+    margin-bottom: 20px;
+    
+}
+
+/* editor de focus/lo que redondea las cajas de texto del emeil y contraseña*/
+
+.cajatexto:focus{
+    outline: 1px solid cornflowerblue;
+    box-shadow: 0 0 10px cornflowerblue;
+}
+
+/* editor de boton de ingresar*/
+.btnform{
+    background-color: var(--color-primario);
+    border-color: slategray;
+    border-radius: 30px;
+    width: 100%;
+    padding: 15px;
+    border-width: 0px;
+    margin-bottom: 20px;
+    color: var(--color-texto);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.btnform:hover{
+    background-color: var(--color-resalte);
+    color: var(--color-fondo);
+    box-shadow: 0 0 0 3px var(--color-texto); 
+}
+.btnform:focus {
+    background-color: var(--color-segundario);
+    color: var(--color-fondo);
+    box-shadow: 0 0 0 3px var(--color-primario); 
+}  
+
+
+/* editor de la funcion que nos permite cambiar si es que ya tenmos cuenta o si nos queremos registrar */
+.texto{
+    font-size: 20px;
+    color: slategray;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5px;
+    display: none;
+}
+
+.btnswitch{
+    background-color: darkblue;
+    border-radius: 30px;
+    padding: 8px;
+    border-width: 0px;
+    color: white;
+    font-size: 16px;
+    display: none;
+}
