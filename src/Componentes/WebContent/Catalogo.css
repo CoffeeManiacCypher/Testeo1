@@ -1,0 +1,193 @@
+/* Elementos universales para toda la plataforma */
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+*{
+  margin: 0;
+  padding: 0;
+  font-family: var(--texto);
+  color: var(--color-texto);
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.c-header{
+    background-image: url("./img_productos/bg_productos.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.c-header .header-container{
+    display: flex;
+    justify-content:space-evenly;
+    margin: 20px 196px;
+    padding: 30px;
+    width: auto;
+    height: auto;
+    
+    .card-cristalina{
+        background-color: var(--color-primario);
+        border: 2px solid transparent;
+        border-radius: 10px;
+        padding: 150px 40px;
+        text-align: center;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        
+        .txt1{
+            color: var(--color-fondo);
+            font-size: 1.5rem;
+            letter-spacing: 0.1em;
+            line-height: 1;
+            padding: 0.1em;
+            backdrop-filter: blur(10px); 
+        }
+
+        .txt2{
+            color: var(--color-fondo);
+            font-family: var(--titulo);
+            font-size: 5rem;
+            font-weight: bold;
+            letter-spacing: 0.069em;
+            padding: .38em;
+            line-height: 1; 
+            backdrop-filter: blur(10px);
+        }  
+    }
+    .card-cristalina:hover {
+        box-shadow: 0 8px 16px 0 rgba(245, 245, 245, 0.497);
+    }
+
+    .card-flamenco{
+        background-color: var(--color-resalte);
+        border: 2px solid transparent;
+        border-radius: 10px;
+        padding: 150px 30px;
+        text-align: center;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+
+        .txt1{
+            color: var(--color-fondo);
+            font-size: 1.5rem;
+            letter-spacing: 0.1em;
+            line-height: 1;
+            padding: 0.1em;
+            backdrop-filter: blur(10px); 
+        }
+
+        .txt2{
+            color: var(--color-fondo);
+            font-family: var(--titulo);
+            font-size: 5rem;
+            font-weight: bold;
+            letter-spacing: 0.069em;
+            padding: .38em;
+            line-height: 1; 
+            backdrop-filter: blur(10px);
+        }     
+    } 
+    .card-flamenco:hover {
+        box-shadow: 0 8px 16px 0 rgba(245, 245, 245, 0.497);
+    }
+}
+
+.c-body .s-cristalina{
+    background-color: var(--color-primario);
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.c-body .cristalina-container{
+    display: flex;
+    justify-content:space-evenly;
+    margin: 20px 196px;
+    padding: 30px;
+    width: auto;
+    height: auto;
+
+    .display-producto{
+        background-color: var(--color-fondo);
+        border: 3px solid transparent;
+        width: 400px;
+        border-radius: 20px;
+        padding: 30px 30px;
+        box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+
+        .producto{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 40%;
+        }
+
+        .nombre{
+            font-family: var(--titulo);
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 0.069em;
+            padding: .38em;
+            text-align: left;
+            line-height: 1.3;  
+        }
+
+        .cantidad{
+            font-size: 1.5rem;
+            letter-spacing: 0.069em;
+            padding: .38em;
+            text-align: left;
+            line-height: 1; 
+        }
+
+        .precio{
+            color: var(--color-segundario);
+            font-family: var(--titulo);
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            padding: .38em;
+            text-align: left;
+            line-height: 1.3;  
+        }
+
+        .boton{
+            font-size: 1.5rem;
+            padding: .38em;
+          }
+          .boton button{
+            color: var(--color-fondo);
+            letter-spacing: 0.1em;
+            padding: 0.7em 1em;
+            background: var(--color-segundario);
+            border: 0.1em solid transparent;
+            border-radius: 0.7em;
+            cursor: pointer;
+            transition: all 0.3s ease 0s;
+          }
+          .boton button:hover{
+            background-color: var(--color-resalte);
+            transform: scale(1.1);
+            border: 0.2em solid var(--color-fondo);
+            box-shadow: 0em 0.2em #ffffff46;
+          }
+
+    }
+}
+
+
+
+
+.c-body .s-flamenco{
+    background-color: var(--color-resalte);
+    min-height: 100vh;
+}

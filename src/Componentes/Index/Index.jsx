@@ -60,23 +60,27 @@ const Index = () => {
 
       <header className="App-header">
 
-        <h1 className="Titulo">Hidratación pura a tu hogar</h1>
-        <h2 className="Subtitulo">Refresca tu día con la pureza de &quot;Agua Purificada Cristalina&quot;.</h2>
-        <a className="btn" href="#"><button className="bi bi-bag-check"> Ver Productos</button></a>
-        
+        <div className='header-container'>
+
+          <h1 className="Titulo">Hidratación pura a tu hogar</h1>
+          <h2 className="Subtitulo">Refresca tu día con la pureza de &quot;Agua Purificada Cristalina&quot;.</h2>
+          <Link className="btn" to={"/Catalogo"}><button className="bi-bag-fill"> Ver Productos</button></Link>
+
+        </div>
+
       </header>
 
       <body className="App-body">
       
-        <div className="lema">
-          <div className='margen'/>
-            <div className="contenido-lema">        
+        <div className="eslogan">
+         
+            <div className="eslogan-container">        
             
               <div className='txt-superior'>&quot;<span className="resaltado-sup">Refresca</span> tu mundo</div>
               <div className='txt-inferior'>bebe <span className="resaltado-inf">calidad</span>&quot;</div>
               
             </div>
-          <div className='margen'/>
+         
         </div>
 
         <div className="productos" id='s-productos'>
@@ -93,7 +97,7 @@ const Index = () => {
               <div className='btn-carrusel'><button>boton</button></div>
 
               <div className='btn-catalogo'>
-              <a className="boton" href="#s-productos"><button>Ver productos</button></a>
+              <Link className="boton" to={"/Catalogo"}><button className="bi-bag-fill"> Ver Productos</button></Link>
               </div>
               <div className='carrusel'>productos de todo tipo</div>
               
@@ -162,19 +166,19 @@ const Index = () => {
         <section className="top">
           <ul>
             <li>
-              <h3>Contactos</h3>
-              <a>55-2829645</a>
-              <a>asodacristalina@gmail.com</a>
-              <a>+56 9 8445 9308</a>
+              <h3 className='txt'>Contactos</h3>
+              <a className='txt'>55-2829645</a>
+              <a className='txt'> asodacristalina@gmail.com</a>
+              <a className='txt'>+56 9 8445 9308</a>
             </li>
           </ul>
           <br />
           <ul>
             <li>
-              <h3>Contactos Flamenco</h3>
-              <a>55-2829645</a>
-              <a>flamencocrg@gmail.com</a>
-              <a>+56 9 9150 7245</a>
+              <h3 className='txt'>Contactos Flamenco</h3>
+              <a  className='txt '>55-2829645</a>
+              <a className='txt'>flamencocrg@gmail.com</a>
+              <a className='txt'>+56 9 9150 7245</a>
             </li>
           </ul>
         </section>
