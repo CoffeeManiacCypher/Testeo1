@@ -94,8 +94,6 @@ const Index = () => {
 
               </div>
 
-              <div className='btn-carrusel'><button>boton</button></div>
-
               <div className='btn-catalogo'>
               <Link className="boton" to={"/Catalogo"}><button className="bi-bag-fill"> Ver Productos</button></Link>
               </div>
