@@ -2,16 +2,16 @@
   --titulo: 'Outfit', sans-serif;
   --texto:'Zilla Slab', serif;
 
-  --color-fondo:#D8D9DD;
+  --color-fondo:#F6F4FF;
   --color-primario: #6AA0C9;
   --color-primario2:#CFDAE2;
-  --color-segundario: #22437E;
-  --color-resalte:#D48EB0;
+  --color-segundario: #44486E;
+  --color-resalte:#D57CBE;
   --color-texto: #180202;
 }
 
 body {
-  background: var(--color-fondo);
+  background: rgba(255,255,255,0);
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

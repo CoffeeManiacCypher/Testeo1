@@ -1,6 +1,6 @@
 import './App.css';
 import Index from './Componentes/Index/Index';
-import Navbar from './Componentes/Navbar/Navbar';
+import Navbar from '../src/Componentes/Index/secciones/Navbar/Navbar';
 import Catalogo from './Componentes/WebContent/Catalogo';
 
 import Login from './Componentes/Login/Login'

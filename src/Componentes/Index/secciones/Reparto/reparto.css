@@ -1,0 +1,69 @@
+.reserva{
+    min-height: 100vh;
+    display: flex;
+    font-size: 18px;
+  
+    .img-repartidor{
+      background-image: url("../../img/Repartidor.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      flex-grow: 1;
+      z-index: 1;
+    }
+    .info-reserva{
+      background-color: var(--color-primario);
+      flex-grow: 1;
+      width: 100px;
+  
+      .txt-container{
+        margin-left: 100px;
+        margin-top: 15vh;
+        margin-right: 196px;
+      }
+  
+      .txt{
+          font-size: 5em;
+          font-family: var(--titulo);
+          color: var(--color-texto);
+          font-weight: bold;
+          letter-spacing: 1.5px;
+          line-height: 1.3;
+          align-self: center;
+          
+      }
+      .txt-info{
+        font-size: 1.5em;
+        font-family: var(--texto);
+        color: var(--color-texto);
+        font-weight: normal;
+        letter-spacing: 1.5px;
+        line-height: 1.3;
+        align-self: center;
+        margin-top: 30px;  
+      }
+  
+      .btn-whs .boton button{
+        margin-top: 30px; 
+        font-family: var(--texto);
+        color: var(--color-fondo);
+        font-weight: normal;
+        letter-spacing: 1.5px;
+        font-size: 24px;
+      
+        line-height: 1.3;
+        align-self: center;
+        padding: 9px 25px;
+        background: #075E54;
+        border: 2px;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+      }
+      .btn-whs .boton button:hover{
+        background-color:	#29A71A;
+        color: var(--color-texto);
+        transform: scale(1.1);
+      }
+   }
+  }

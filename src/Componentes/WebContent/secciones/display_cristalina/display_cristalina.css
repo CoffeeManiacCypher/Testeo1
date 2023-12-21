@@ -1,0 +1,95 @@
+.s-cristalina {
+    background-color: var(--color-primario);
+    height: 100vh;
+    padding: 10px 40px;
+}
+
+.cristalina-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto auto;
+    padding: 2rem;
+    width: auto;
+    height: auto;
+    gap: 2rem;
+
+    .display-producto {
+        position: relative;
+        background-color: var(--color-fondo);
+        border: 3px solid transparent;
+        width: 400px;
+        height: 40rem;
+        border-radius: 20px;
+        padding: 30px 30px;
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease 0s;
+
+        .producto {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-height: 16rem;
+            width: auto; 
+
+        }
+
+        .nombre {
+            font-family: var(--titulo);
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 0.069em;
+            padding: .38em;
+            text-align: left;
+            line-height: 1.3;
+        }
+
+        .cantidad {
+            font-size: 1.5rem;
+            letter-spacing: 0.069em;
+            padding: .38em;
+            text-align: left;
+            line-height: 1;
+        }
+
+        .precio {
+            color: var(--color-segundario);
+            font-family: var(--titulo);
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            padding: .38em;
+            text-align: left;
+            line-height: 1.3;
+        }
+
+        .boton {
+            font-size: 1.5rem;
+            padding: .38em;
+            position: absolute; 
+            bottom: 1rem;
+        }
+
+        .boton button {
+            color: var(--color-fondo);
+            letter-spacing: 0.1em;
+            padding: 0.7em 1em;
+            background: var(--color-segundario);
+            border: 0.1em solid transparent;
+            border-radius: 0.7em;
+            cursor: pointer;
+            transition: all 0.3s ease 0s;
+        }
+
+        .boton button:hover {
+            background-color: var(--color-resalte);
+            transform: scale(1.1);
+            border: 0.2em solid var(--color-fondo);
+            box-shadow: 0em 0.2em #ffffff46;
+        }
+
+    }
+    .display-producto:hover{
+        transform: scale(1.01);
+    }
+}
