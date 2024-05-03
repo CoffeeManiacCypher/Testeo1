@@ -5,7 +5,7 @@ const About = () => {
     const [clientes, setClientes] = useState([
       {
         _id: 1,
-        nombre: 'John Doe',
+        nombre: 'Joseph Ramirez',
         correo: 'john@example.com',
         telefono: '123-456-7890',
       },

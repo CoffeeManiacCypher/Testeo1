@@ -2,7 +2,7 @@ import "./reparto.css";
 
 const reparto = () => {
     // Redirije al numero de whatsapp de la empresa
-    const phoneNumber = '+56964115359'; // N° de la empresa
+    const phoneNumber = '+56991507245'; // N° de la empresa
     const message = 'Saludos, me gustaria solicitar un envio a domicilio.';
     const handleWhatsappClick = () => {
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
